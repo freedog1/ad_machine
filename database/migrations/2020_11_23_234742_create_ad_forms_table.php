@@ -15,6 +15,11 @@ class CreateAdFormsTable extends Migration
     {
         Schema::create('ad_forms', function (Blueprint $table) {
             $table->bigIncrements('id');
+            //広告名、性別、年齢、八地方区分
+            $table->string('ad_name',40);
+            $table->boolean('gender');
+            $table->tinyInteger('age');
+            $table->string('region',40);
             $table->timestamps();
         });
     }

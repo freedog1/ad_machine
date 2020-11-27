@@ -11,6 +11,10 @@
 |
 */
 
+use App\Http\Controllers\AdFormController;
+// use Symfony\Component\Routing\Annotation\Route;
+
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -19,3 +23,8 @@ Route::get('tests/test', 'TestController@index');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+//REST
+// Route::resource('ads', 'AdFormController');
+
+Route::get('ad/index','AdFormController@index');

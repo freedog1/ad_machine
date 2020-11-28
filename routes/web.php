@@ -25,6 +25,6 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 //REST
-// Route::resource('ads', 'AdFormController');
+Route::resource('ads', 'AdFormController');
 
-Route::get('ad/index','AdFormController@index');
+// Route::get('ad/index','AdFormController@index');

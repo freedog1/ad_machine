@@ -20,11 +20,24 @@ Route::get('/', function () {
 });
 
 Route::get('tests/test', 'TestController@index');
-Auth::routes();
+// Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-//REST
-Route::resource('ads', 'AdFormController');
+// Route::middleware('auth:api', 'throttle:60,1')->group(function () {
+//     //REST
+//     // Route::resource('ads', 'AdFormController');
+//     Route::get('index','AdFormController@index');
+// });
 
-// Route::get('ad/index','AdFormController@index');
+Route::group(['middleware' => 'auth'], function(){
+    // Route::get('index','AdFormController@index');
+    Route::resource('ads', 'AdFormController');
+});
+
+// Route::get('/', function () {
+//     return view('/home');
+// })->name('login');
+Auth::routes();
+
+// Route::get('/home', 'HomeController@index')->name('home');

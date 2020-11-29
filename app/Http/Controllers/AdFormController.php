@@ -14,6 +14,7 @@ class AdFormController extends Controller
     public function index()
     {
         //
+        \Debugbar::info(1);
         return view('ad.index');
     }
 

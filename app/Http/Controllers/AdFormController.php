@@ -13,8 +13,6 @@ class AdFormController extends Controller
      */
     public function index()
     {
-        //
-        \Debugbar::info(1);
         return view('ad.index');
     }
 
@@ -25,7 +23,7 @@ class AdFormController extends Controller
      */
     public function create()
     {
-        //
+        return view('ad.create');
     }
 
     /**

@@ -14,7 +14,7 @@
               </div>
             @endif
 
-            <form method="GET" action="{{ route('ads.create') }}">
+            <form method="GET" action="{{ route('ad.create') }}">
               <button type="submit" class="btn btn-primary">
                 新規登録
               </button>

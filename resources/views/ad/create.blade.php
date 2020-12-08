@@ -35,19 +35,35 @@
               <br>
               対象年齢
               <select name="age">
-                <option value="">洗濯してください</option>
+                <option value="">選択してください</option>
                 <option value="1">~19歳</option>
-                
+                <option value="2">20歳~29歳</option>
+                <option value="3">30歳~39歳</option>
+                <option value="4">40歳~49歳</option>
+                <option value="5">50歳~59歳</option>
+                <option value="6">60歳~</option>
+              </select>
+              <br>
               対象地域
-
-              
-
-              <button type="submit" class="btn btn-primary">
-                新規登録
-              </button>
+              <select name="region">
+                <option value="">選択してください</option>
+                <option value="1">北海道</option>
+                <option value="2">東北</option>
+                <option value="3">関東</option>
+                <option value="4">中部</option>
+                <option value="5">近畿</option>
+                <option value="6">中国</option>
+                <option value="7">四国</option>
+                <option value="8">九州</option>
+              </select>
+              <br>
+              掲載する広告
+              ファイルアップロード
+              <input type="checkbox" name="caution" value="1">注意事項に同意する
+              <br>
+              <input class="btn btn-info" type="submit" value="登場する">
             </form>
-            
-            氏名
+          </div>
         </div>
       </div>
     </div>
@@ -64,7 +80,3 @@
 
 ・view数
 ・広告料
-
-
-
-<a href="/"

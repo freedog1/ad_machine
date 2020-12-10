@@ -34,7 +34,14 @@ class AdFormController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $ad_name = $request->input('ad_name');
+        $gender = $request->input('gender');
+        $age = $request->input('age');
+        $region = $request->input('region');
+        //最初は申請中で登録
+        $status = '申請中';
+        //$users_idもあとで入れる
+        dd($request);
     }
 
     /**

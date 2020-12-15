@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Models\AdForm;
+
 class AdFormController extends Controller
 {
     /**
@@ -34,14 +36,20 @@ class AdFormController extends Controller
      */
     public function store(Request $request)
     {
-        $ad_name = $request->input('ad_name');
-        $gender = $request->input('gender');
-        $age = $request->input('age');
-        $region = $request->input('region');
+        $ad = new AdForm;
+
+        $ad->ad_name = $request->input('ad_name');
+        $ad->gender = $request->input('gender');
+        $ad->age = $request->input('age');
+        $ad->region = $request->input('region');
         //最初は申請中で登録
-        $status = '申請中';
-        //$users_idもあとで入れる
-        dd($request);
+        $ad->status = '申請中';
+        $ad->users_id = $request->input('users_id');
+
+
+        $ad->save();
+
+        return redirect('ads');
     }
 
     /**

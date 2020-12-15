@@ -58,6 +58,9 @@
               </select>
               <br>
               掲載する広告
+              <br>
+              <input type="hidden" name="users_id" value={{ Auth::user()->id }}></input>
+              
               ファイルアップロード
               <input type="checkbox" name="caution" value="1">注意事項に同意する
               <br>

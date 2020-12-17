@@ -19,8 +19,28 @@
                 新規登録
               </button>
             </form>
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th scope="col">id</th>
+                  <th scope="col">ad_name</th>
+                </tr>
+              </thead>
+              <tbody>
+                @foreach ($ads as $ad)
+                <tr>
+                  <th scope="row"> {{ $ad->id}}</th>
+                  <td>{{ $ad->ad_name}}</td>
+                </tr>
+                @endforeach
+              </tbody>
+            </table>
+
             
-            氏名
+           
+            
+                
+           
         </div>
       </div>
     </div>

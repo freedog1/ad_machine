@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 use App\Models\AdForm;
+
 
 class AdFormController extends Controller
 {
@@ -15,7 +17,17 @@ class AdFormController extends Controller
      */
     public function index()
     {
-        return view('ad.index');
+        //エロクアント
+        //$ads = AdForm::all();
+
+        //クエリビルダ
+        $ads = DB::table('ad_forms')
+        ->select('id','ad_name')
+        ->orderBy('id','desc')
+        ->get();
+
+        // dd($ads);
+        return view('ad.index', compact('ads'));
     }
 
     /**

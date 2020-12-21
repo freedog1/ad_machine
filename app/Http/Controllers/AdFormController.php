@@ -72,7 +72,9 @@ class AdFormController extends Controller
      */
     public function show($id)
     {
-        //
+        $ad = AdForm::find($id);
+
+        return view('ad.show', compact('ad'));
     }
 
     /**

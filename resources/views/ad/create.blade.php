@@ -36,25 +36,25 @@
               対象年齢
               <select name="age">
                 <option value="">選択してください</option>
-                <option value="1">~19歳</option>
-                <option value="2">20歳~29歳</option>
-                <option value="3">30歳~39歳</option>
-                <option value="4">40歳~49歳</option>
-                <option value="5">50歳~59歳</option>
-                <option value="6">60歳~</option>
+                <option value="0">~19歳</option>
+                <option value="1">20歳~29歳</option>
+                <option value="2">30歳~39歳</option>
+                <option value="3">40歳~49歳</option>
+                <option value="4">50歳~59歳</option>
+                <option value="5">60歳~</option>
               </select>
               <br>
               対象地域
               <select name="region">
                 <option value="">選択してください</option>
-                <option value="1">北海道</option>
-                <option value="2">東北</option>
-                <option value="3">関東</option>
-                <option value="4">中部</option>
-                <option value="5">近畿</option>
-                <option value="6">中国</option>
-                <option value="7">四国</option>
-                <option value="8">九州</option>
+                <option value="0">北海道</option>
+                <option value="1">東北</option>
+                <option value="2">関東</option>
+                <option value="3">中部</option>
+                <option value="4">近畿</option>
+                <option value="5">中国</option>
+                <option value="6">四国</option>
+                <option value="7">九州</option>
               </select>
               <br>
               掲載する広告

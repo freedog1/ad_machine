@@ -26,11 +26,15 @@
 
             showです
             {{ $ad->ad_name }}
+            {{ $gender }}
+            {{ $age }}
+            {{ $region }}
+            {{ $ad->status }}
 
             <form method="GET" action="">
               @csrf
 
-              <input class="btn btn-info" type="submit" value="登場する">
+              <input class="btn btn-info" type="submit" value="変更する">
             </form>
           </div>
         </div>

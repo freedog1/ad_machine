@@ -26,7 +26,6 @@ class AdFormController extends Controller
         ->orderBy('id','desc')
         ->get();
 
-        // dd($ads);
         return view('ad.index', compact('ads'));
     }
 
@@ -74,7 +73,60 @@ class AdFormController extends Controller
     {
         $ad = AdForm::find($id);
 
-        return view('ad.show', compact('ad'));
+        //性別
+        if ($ad->gender === 0){
+            $gender = '男性';
+        }
+        if ($ad->gender === 1){
+            $gender = '女性';
+        }
+        //年齢
+        if ($ad->age === 0){
+            $age = '~19歳';
+        }
+        if ($ad->age === 1){
+            $age = '20歳~29歳';
+        }
+        if ($ad->age === 2){
+            $age = '30歳~39歳';
+        }
+        if ($ad->age === 3){
+            $age = '40歳~49歳';
+        }
+        if ($ad->age === 4){
+            $age = '50歳~59歳';
+        }
+        if ($ad->age === 5){
+            $age = '60歳~';
+        }
+
+        //地域
+        if ($ad->region === 0){
+            $region = '北海道';
+        }
+        if ($ad->region === 1){
+            $region = '東北';
+        }
+        if ($ad->region === 2){
+            $region = '関東';
+        }
+        if ($ad->region === 3){
+            $region = '中部';
+        }
+        if ($ad->region === 4){
+            $region = '近畿';
+        }
+        if ($ad->region === 5){
+            $region = '中国';
+        }
+        if ($ad->region === 6){
+            $region = '四国';
+        }
+        if ($ad->region === 7){
+            $region = '九州';
+        }
+
+        return view('ad.show', compact('ad','gender','age','region'));
     }
 
     /**

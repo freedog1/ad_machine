@@ -31,16 +31,12 @@
                 <tr>
                   <th scope="row"> {{ $ad->id}}</th>
                   <td>{{ $ad->ad_name}}</td>
+                  <td><a href="{{ route('ads.show', ['ad' => $ad->id]) }}">詳細を見る</a></td>
+                  
                 </tr>
                 @endforeach
               </tbody>
             </table>
-
-            
-           
-            
-                
-           
         </div>
       </div>
     </div>

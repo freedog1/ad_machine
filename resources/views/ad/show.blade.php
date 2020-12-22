@@ -25,6 +25,7 @@
             @endif
 
             showです
+            
             {{ $ad->ad_name }}
             {{ $gender }}
             {{ $age }}

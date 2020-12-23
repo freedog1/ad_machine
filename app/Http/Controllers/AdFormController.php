@@ -177,6 +177,9 @@ class AdFormController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $ad = AdForm::find($id);
+        $ad->delete();
+
+        return redirect('ads');
     }
 }

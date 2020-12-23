@@ -34,9 +34,13 @@
 
             <form method="GET" action="{{ route('ads.edit', ['ad' => $ad->id]) }}">
               @csrf
-
               <input class="btn btn-info" type="submit" value="変更する">
             </form>
+            <form method="POST" action="{{ route('ads.destroy', ['ad' => $ad->id]) }}">
+              @csrf
+              @method("DELETE")
+              <input class="btn btn-info" type="submit" value="削除する">
+            
           </div>
         </div>
       </div>

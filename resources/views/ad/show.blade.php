@@ -32,7 +32,7 @@
             {{ $region }}
             {{ $ad->status }}
 
-            <form method="GET" action="">
+            <form method="GET" action="{{ route('ads.edit', ['ad' => $ad->id]) }}">
               @csrf
 
               <input class="btn btn-info" type="submit" value="変更する">

@@ -138,6 +138,9 @@ class AdFormController extends Controller
     public function edit($id)
     {
         //
+        $ad = AdForm::find($id);
+
+        return view('ad.edit', compact('ad'));
     }
 
     /**
@@ -149,7 +152,21 @@ class AdFormController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $ad = AdForm::find($id);
+        // dd($ad);
+        
+        $ad->ad_name = $request->input('ad_name');
+        $ad->gender = $request->input('gender');
+        $ad->age = $request->input('age');
+        $ad->region = $request->input('region');
+        //最初は申請中で登録
+        $ad->status = '申請中';
+        $ad->users_id = $request->input('users_id');
+
+
+        $ad->save();
+
+        return redirect('ads');
     }
 
     /**

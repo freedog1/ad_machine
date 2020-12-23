@@ -64,7 +64,7 @@
               ファイルアップロード
               <input type="checkbox" name="caution" value="1">注意事項に同意する
               <br>
-              <input class="btn btn-info" type="submit" value="登場する">
+              <input class="btn btn-info" type="submit" value="登録する">
             </form>
           </div>
         </div>

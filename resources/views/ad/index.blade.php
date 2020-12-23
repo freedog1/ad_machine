@@ -32,6 +32,7 @@
                   <th scope="row"> {{ $ad->id}}</th>
                   <td>{{ $ad->ad_name}}</td>
                   <td><a href="{{ route('ads.show', ['ad' => $ad->id]) }}">詳細を見る</a></td>
+                  <td><a href="{{ route('ads.edit', ['ad' => $ad->id]) }}">編集する</a></td>
                   
                 </tr>
                 @endforeach
@@ -55,5 +56,3 @@
 ・広告料
 
 
-
-<a href="/"
